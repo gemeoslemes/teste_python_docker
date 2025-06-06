@@ -5,7 +5,7 @@ from models import Base
 from typing import Generator
 
 # Ajustando para se conectar ao banco dentro do contêiner
-DATABASE_URL = os.getenv('DATABASE_URL', "postgresql://postgres:minhasenha@postgres_db:5432/ningipoints")
+DATABASE_URL = os.getenv('DATABASE_URL', "postgresql://postgres:minhasenha@postgres_db:5433/ningipoints")
 
 # Criando a engine
 engine = create_engine(DATABASE_URL, future=True)
