@@ -10,7 +10,7 @@ docker run -d \
     -e POSTGRES_USER=postgres \
     -e POSTGRES_PASSWORD=minhasenha \
     -e POSTGRES_DB=ningipoints \
-    -p 5432:5432 \
+    -p 5433:5433 \
     postgres:latest
 
 # Construir e subir a aplicação FastAPI
