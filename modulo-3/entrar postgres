@@ -1,0 +1,34 @@
+entrar no postgres
+
+no banco de dados ningipoints
+
+docker exec -it postgres psql -U postgres -d ningipoints
+
+
+comando para ambiente virtual do python
+
+source /nfs/homes/clemes-d/venv/bin/activate
+
+para sair do ambiente virtual do python
+deactivate
+
+
+docker
+
+docker run --name postgres \
+-v postgres-data:/var/lib/postgresql/data \
+-p 5432:5432 \
+-e POSTGRES_DB=ningipoints \
+-e POSTGRES_USER=postgres \
+-e POSTGRES_PASSWORD=minhasenha \
+-d postgres
+
+
+
+teste 200 e 204 de retorno quando tabela vazia
+
+# 🏆 Testes para GET /accounts
+#def test_get_accounts_empty():
+#    """Testa a listagem de contas quando o banco está vazio."""
+#    response = client.get("/accounts")
+#    assert response.status_code == 204  # Deve retornar No Content se não houver contas
